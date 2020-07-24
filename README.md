@@ -3,11 +3,6 @@ Script uses selenium to browse epic games and claim free games.
 
 REQUIREMENTS
 -------------------------------------------------------------------------------------------------------------
-Package           Version
------------------ ---------
-selenium          3.141.0
-win10toast        0.9
-
 1. pip install selenium
 2. pip install win10toast
 
@@ -22,9 +17,9 @@ SETTING UP CONFIG.PY
 --------------------------------------------------------------------------------------------------------------
 1. Open the folder in which you saved app.py and create config.py
 2. Enter your credentials.
-  e.g. email = 'totallylegit@email.com'
-       password = 'mysecurepassword'
-       user_agent = '*Type my user agent in google chrome and paste the whole thing'
+email = 'totallylegit@email.com'
+password = 'mysecurepassword'
+user_agent = '*Type my user agent in google chrome and paste the whole thing'
 3. save the file
 
 
