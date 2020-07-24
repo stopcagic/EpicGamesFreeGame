@@ -119,5 +119,4 @@ try:
 except:
     notify.show_toast(title='Error: ', msg='I am unable to fetch a game.')
 
-
 driver.quit()
