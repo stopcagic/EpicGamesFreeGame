@@ -99,7 +99,7 @@ def get_games():
 #----------------------------------MAIN--------------------------------------
 PATH = 'C:\\Program Files (x86)\\chromedriver.exe'
 opts = Options()
-opts.headless = False
+opts.headless = True
 opts.add_argument('user-agent=' + config.user_agent)
 driver = webdriver.Chrome(PATH,options=opts)
 driver.get('https://www.epicgames.com/store/en-US/')
