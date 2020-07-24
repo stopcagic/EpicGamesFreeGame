@@ -3,6 +3,8 @@ Script uses selenium to browse epic games and claim free games.
 
 REQUIREMENTS
 -------------------------------------------------------------------------------------------------------------
+Python if you dont have it on your PC
+
 1. pip install selenium
 2. pip install win10toast
 
