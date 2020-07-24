@@ -18,9 +18,12 @@ SETTING UP CONFIG.PY
 1. Open the folder in which you saved app.py and create config.py
 2. Enter your credentials:
 
-  email = 'totallylegit@email.com'
-  password = 'mysecurepassword'
-  user_agent = '*Type my user agent in google chrome and paste the whole thing'
+     email = 'totallylegit@email.com'
+  
+     password = 'mysecurepassword'
+  
+     user_agent = '*Type my user agent in google chrome and paste the whole thing'
+  
   
 3. save the file
 
