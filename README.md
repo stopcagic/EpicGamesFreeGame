@@ -31,3 +31,7 @@ SETTING UP CONFIG.PY
 
 
 if captcha keeps popping up, comment out last line of code, run the code a few times and fill out captcha every time.
+
+HOW TO MAKE THE SCRIPT RUN AUTOMATICALLY
+----------------------------------------------------------------------------------------------------------------
+https://www.youtube.com/watch?v=n2Cr_YRQk7o (all copyrights in this video belong to Cedric Yarish)
