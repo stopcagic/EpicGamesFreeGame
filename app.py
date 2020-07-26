@@ -68,7 +68,9 @@ def get_games():
         clickGame.click()
         #Wait for the page to load and find the button with ugly css selector cuz XPath doesn't work for some reason.
         sleep(5)
-        if_owned = driver.find_element_by_css_selector('#dieselReactWrapper > div > div.css-1pmvko1 > main > div > div > div.ProductDetails-wrapper_2d124844 > div > div.ProductDetailHeader-wrapper_e0846efc > div:nth-child(2) > div > div > div.Description-ctaWrapper_e8d00c38 > div > div > div > div.PurchaseButton-ctaButtonContainer_c531d577 > div > button > span > span')
+        if_owned = WebDriverWait(driver, 30).until(
+        ec.presence_of_element_located((By.CSS_SELECTOR, '#dieselReactWrapper > div > div.css-1pmvko1 > main > div > div > div.ProductDetails-wrapper_2d124844 > div > div.ProductDetailHeader-wrapper_e0846efc > div:nth-child(2) > div > div > div.Description-ctaWrapper_e8d00c38 > div > div > div > div.PurchaseButton-ctaButtonContainer_c531d577 > div > button > span > span'))
+        )
         #Provjerimo dal nam igra vec postoji u library.
         if(if_owned.text.upper() == 'OWNED'):
             notify.show_toast(title='I ran.', msg='You already own ' + game['name'])
