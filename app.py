@@ -79,7 +79,9 @@ def get_games():
 
             sleep(5)
             #Brza provjera da li je igra zaista besplatna. Better be safe than sorry.
-            check_price = driver.find_element_by_xpath('//*[@id="purchase-app"]/div/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div/span')
+            check_price = WebDriverWait(driver, 30).until(
+            ec.presence_of_element_located((By.XPATH, '//*[@id="purchase-app"]/div/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div/span'))
+            )
             game_price = check_price.text
 
             if(game_price.split('€')[1] == '0.00'):
