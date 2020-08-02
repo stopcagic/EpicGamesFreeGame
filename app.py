@@ -66,12 +66,14 @@ def get_games():
         sleep(5)
         clickGame = driver.find_element_by_xpath(game['path'])
         clickGame.click()
+
         #Wait for the page to load and find the button with ugly css selector cuz XPath doesn't work for some reason.
         sleep(5)
-        if_owned = driver.find_element_by_css_selector('#dieselReactWrapper > div > div.css-1pmvko1 > main > div > div > div.ProductDetails-wrapper_2d124844 > div > div.ProductDetailHeader-wrapper_e0846efc > div:nth-child(2) > div > div > div.Description-ctaWrapper_e8d00c38 > div > div > div > div.PurchaseButton-ctaButtonContainer_c531d577 > div > button > span > span')
+        if_owned = driver.find_element_by_css_selector('#dieselReactWrapper > div > div.css-1pmvko1 > main > div > div > div.ProductDetails-wrapper_2d124844 > div > div.ProductDetailHeader-wrapper_e0846efc > div:nth-child(2) > div > div > div.Description-ctaWrapper_e8d00c38 > div > div > div > div.css-wgi9q7 > div > button > span > span')
+
         #Provjerimo dal nam igra vec postoji u library.
         if(if_owned.text.upper() == 'OWNED'):
-            notify.show_toast(title='I ran.', msg='You already own ' + game['name'])
+            notify.show_toast(title='I checked.', msg='You already own ' + game['name'])
             driver.get('https://www.epicgames.com/store/en-US/')
         else:
             #Get the game.
@@ -101,7 +103,7 @@ def get_games():
 #----------------------------------MAIN--------------------------------------
 PATH = 'C:\\Program Files (x86)\\chromedriver.exe'
 opts = Options()
-opts.headless = True
+opts.headless = False
 opts.add_argument('user-agent=' + config.user_agent)
 driver = webdriver.Chrome(PATH,options=opts)
 driver.get('https://www.epicgames.com/store/en-US/')
