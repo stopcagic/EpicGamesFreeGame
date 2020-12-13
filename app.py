@@ -40,7 +40,7 @@ def log_in():
         WebDriverWait(driver, 5).until(
         ec.presence_of_element_located((By.XPATH, '//*[@id="root"]/div/div/div/div/div[2]/div/form'))
         )
-        print('Cock blocked by captcha.')
+        print('Blocked by captcha.')
         driver.quit()
         os.execv(sys.executable, ['python'] + sys.argv)
 
